@@ -56,7 +56,7 @@ const SettingsPanel = ({ isOpen, onClose }) => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `echo-tab-config-${Date.now()}.json`;
+    a.download = `dash-tab-config-${Date.now()}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };

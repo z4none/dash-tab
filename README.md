@@ -1,4 +1,4 @@
-# EchoTab
+# DashTab
 
 一个优雅、可定制的浏览器起始页
 
@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![React](https://img.shields.io/badge/React-19.2-61dafb.svg)
 
-![EchoTab Preview](screenshot/1.png)
+![DashTab Preview](screenshot/1.png)
 
 ## 特性
 
@@ -48,7 +48,7 @@ npm run build
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/echo-tab)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?reposgit clone https://github.com/z4none/dash-tab.git)
 
 ### 手动部署
 

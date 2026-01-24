@@ -371,7 +371,7 @@ const useStore = create(
       setLayout: (layout) => set({ layout }),
     }),
     {
-      name: 'echo-tab-storage',
+      name: 'dash-tab-storage',
       version: 1,
       partializeState: (state) => ({
         // 排除 isEditMode，不持久化到 localStorage

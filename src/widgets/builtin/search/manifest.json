@@ -3,7 +3,7 @@
   "name": "搜索",
   "description": "多引擎搜索框，支持 Google、Bing、百度、DuckDuckGo",
   "version": "1.0.0",
-  "author": "EchoTab",
+  "author": "DashTab",
   "type": "builtin",
   "icon": "🔍",
   "defaultSize": {

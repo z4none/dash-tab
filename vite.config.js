@@ -27,8 +27,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
-        name: 'EchoTab - 个性化浏览器启动页',
-        short_name: 'EchoTab',
+        name: 'DashTab - 个性化浏览器启动页',
+        short_name: 'DashTab',
         description: '快速、美观、可定制的浏览器启动页',
         theme_color: '#0ea5e9',
         background_color: '#ffffff',

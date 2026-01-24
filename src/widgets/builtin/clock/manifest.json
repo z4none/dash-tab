@@ -3,7 +3,7 @@
   "name": "时钟",
   "description": "显示当前时间和日期，支持12/24小时制切换",
   "version": "1.0.0",
-  "author": "EchoTab",
+  "author": "DashTab",
   "type": "builtin",
   "icon": "⏰",
   "defaultSize": {

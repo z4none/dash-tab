@@ -3,7 +3,7 @@
  * 使用 IndexedDB 存储壁纸图片数据
  */
 
-const DB_NAME = 'EchoTabWallpapers';
+const DB_NAME = 'DashTabWallpapers';
 const STORE_NAME = 'wallpapers';
 const DB_VERSION = 1;
 const CACHE_EXPIRY_DAYS = 7; // 缓存有效期 7 天
