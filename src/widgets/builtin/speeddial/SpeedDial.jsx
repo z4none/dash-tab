@@ -5,6 +5,7 @@ import { useWidgetStyles } from '../../core/widgetStyles';
 
 // QWERTY 键盘布局
 const KEYBOARD_LAYOUT = [
+  ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
   ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
@@ -70,9 +71,9 @@ function SpeedDial({ instanceId, config, manifest }) {
       const containerWidth = container.clientWidth;
       const containerHeight = container.clientHeight;
 
-      // QWERTY 布局尺寸：3行，最宽10个键
+      // QWERTY 布局尺寸：4行，最宽10个键
       // 宽度需要：10个键 + 9个间隙
-      // 高度需要：3个键 + 2个间隙
+      // 高度需要：4个键 + 3个间隙
       const gap = 8; // 间隙大小
       const padding = 12; // 容器内边距
 
@@ -82,7 +83,7 @@ function SpeedDial({ instanceId, config, manifest }) {
 
       // 根据高度计算按键大小
       const availableHeight = containerHeight - padding * 2;
-      const keySizeByHeight = (availableHeight - gap * 2) / 3;
+      const keySizeByHeight = (availableHeight - gap * 3) / 4;
 
       // 取较小值，确保按键不会溢出
       const calculatedSize = Math.floor(Math.min(keySizeByWidth, keySizeByHeight));
@@ -115,7 +116,7 @@ function SpeedDial({ instanceId, config, manifest }) {
       }
 
       const key = e.key.toLowerCase();
-      if (/^[a-z]$/.test(key)) {
+      if (/^[a-z0-9]$/.test(key)) {
         e.preventDefault();
         // 设置按下的按键以显示高亮
         setPressedKey(key);
@@ -129,7 +130,7 @@ function SpeedDial({ instanceId, config, manifest }) {
       }
 
       const key = e.key.toLowerCase();
-      if (/^[a-z]$/.test(key)) {
+      if (/^[a-z0-9]$/.test(key)) {
         // 清除按下状态
         setPressedKey(null);
 
@@ -248,9 +249,8 @@ function SpeedDial({ instanceId, config, manifest }) {
       >
         {/* 字母 */}
         <div
-          className={`font-bold ${
-            hasBinding ? 'text-white' : widgetStyles.textPrimary
-          }`}
+          className={`font-bold ${hasBinding ? 'text-white' : widgetStyles.textPrimary
+            }`}
           style={{ fontSize: `${Math.max(12, keySize * 0.35)}px` }}
         >
           {key}
@@ -297,7 +297,7 @@ function SpeedDial({ instanceId, config, manifest }) {
               key={rowIndex}
               className="flex gap-2"
               style={{
-                marginLeft: rowIndex === 1 ? `${keySize * 0.5}px` : rowIndex === 2 ? `${keySize * 1}px` : '0'
+                marginLeft: rowIndex === 2 ? `${keySize * 0.5}px` : rowIndex === 3 ? `${keySize * 1}px` : '0'
               }}
             >
               {row.map((key) => renderKey(key, keySize))}
