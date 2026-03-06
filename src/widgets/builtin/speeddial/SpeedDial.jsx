@@ -163,8 +163,9 @@ function SpeedDial({ instanceId, config, manifest }) {
 
   // 开始编辑某个按键
   const startEditKey = (key) => {
+    const lowerKey = key.toLowerCase();
     setEditingKey(key);
-    setEditingUrl(bindings[key] || '');
+    setEditingUrl(bindings[lowerKey] || '');
   };
 
   // 保存按键绑定
